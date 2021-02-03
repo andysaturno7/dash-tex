@@ -1,0 +1,33 @@
+<mat-card style="background: transparent; box-shadow: none">
+  <mat-card-header>
+    <mat-card-title>
+      Reporte de Registro
+      <!-- <button
+        mat-icon-button
+        class="more-button"
+        [matMenuTriggerFor]="menu"
+        aria-label="Toggle menu"
+      >
+        <mat-icon>more_vert</mat-icon>
+      </button>
+      <mat-menu #menu="matMenu" xPosition="before">
+        <button mat-menu-item>Expand</button>
+        <button mat-menu-item>Remove</button>
+      </mat-menu> -->
+    </mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <div>
+      <reg-rep-form (formReady)="onSeeReport($event)"></reg-rep-form>
+    </div>
+  </mat-card-content>
+
+  <table-reports *ngIf="dataTable" [tableData]="dataTable"></table-reports>
+
+  <div
+    *ngIf="tableSpinner"
+    style="position: absolute; left: 50%; transform: translateX(-50%)"
+  >
+    <mat-spinner></mat-spinner>
+  </div>
+</mat-card>

@@ -1,0 +1,101 @@
+<div *ngIf="tableData">
+  <div>
+    <mat-form-field>
+      <mat-label> Filtro... </mat-label>
+      <input
+        matInput
+        (keyup)="applyFilter($event)"
+        placeholder="Maria"
+        #input
+      />
+    </mat-form-field>
+  </div>
+  <button
+    mat-raised-button
+    color="primary"
+    (click)="
+      exporter.exportTable('csv', {
+        fileName: 'registrantReport'
+      })
+    "
+    style="margin-right: 0"
+  >
+    CSV
+    <mat-icon>get_app</mat-icon>
+  </button>
+  <button
+    mat-raised-button
+    color="primary"
+    (click)="
+      exporter.exportTable('xls', {
+        fileName: 'registrantReport',
+        type: 'array'
+      })
+    "
+    style="margin-right: 0"
+  >
+    XLS
+    <mat-icon>get_app</mat-icon>
+  </button>
+  <div
+    class="scroll-tune mat-elevation-z8"
+    style="max-width: 100%; overflow: auto"
+  >
+    <table
+      mat-table
+      matSort
+      matTableExporter
+      [dataSource]="dataSource"
+      #exporter="matTableExporter"
+    >
+      <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef>Id</th>
+        <td mat-cell *matCellDef="let element">
+          {{ element.id }}
+        </td>
+      </ng-container>
+      <ng-container matColumnDef="first_name">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Nombre</th>
+        <td mat-cell *matCellDef="let element">
+          {{ element.first_name }}
+        </td>
+      </ng-container>
+      <ng-container matColumnDef="last_name">
+        <th mat-header-cell *matHeaderCellDef>Apellido</th>
+        <td mat-cell *matCellDef="let element">
+          {{ element.last_name }}
+        </td>
+      </ng-container>
+      <ng-container matColumnDef="email">
+        <th mat-header-cell *matHeaderCellDef>Correo</th>
+        <td mat-cell *matCellDef="let element">
+          {{ element.email }}
+        </td>
+      </ng-container>
+      <ng-container matColumnDef="status">
+        <th mat-header-cell *matHeaderCellDef>Estado</th>
+        <td mat-cell *matCellDef="let element">
+          {{ element.status }}
+        </td>
+      </ng-container>
+      <ng-container matColumnDef="link">
+        <th mat-header-cell *matHeaderCellDef>Link</th>
+        <td mat-cell *matCellDef="let element">
+          {{ element.join_url }}
+        </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+
+      <tr class="mat-row" *matNoDataRow>
+        <td class="mat-cell" colspan="4">
+          No coinciden datos con: {{ input.value }}
+        </td>
+      </tr>
+    </table>
+  </div>
+
+  <mat-paginator [pageSizeOptions]="[5, 10, 50]" showFirstLastButtons>
+  </mat-paginator>
+</div>

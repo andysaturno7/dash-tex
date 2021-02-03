@@ -1,0 +1,52 @@
+<form [formGroup]="regRepForm" (ngSubmit)="onSubmit()">
+  <mat-card class="shipping-card">
+    <mat-card-content>
+      <div class="row">
+        <div class="col">
+          <mat-form-field style="margin-right: 10px">
+            <mat-select placeholder="Tipo..." formControlName="wm">
+              <mat-option *ngFor="let wm of WM" [value]="wm.value">
+                {{ wm.name }}
+              </mat-option>
+            </mat-select>
+            <mat-error *ngIf="regRepForm.controls['wm'].hasError('required')">
+              Webinar o Reunión es <strong>requerido</strong>
+            </mat-error>
+          </mat-form-field>
+          <mat-form-field style="margin-right: 10px">
+            <input
+              matInput
+              #id
+              placeholder="Id"
+              type="number"
+              formControlName="wmId"
+            />
+            <mat-error *ngIf="regRepForm.controls['wmId'].hasError('required')">
+              El Id es <strong>requerido</strong>
+            </mat-error>
+          </mat-form-field>
+          <mat-form-field style="margin-right: 10px">
+            <mat-select placeholder="Estado..." formControlName="regStatus">
+              <mat-option *ngFor="let st of Status" [value]="st.value">
+                {{ st.name }}
+              </mat-option>
+            </mat-select>
+            <mat-error *ngIf="regRepForm.controls['wm'].hasError('required')">
+              Estado es <strong>requerido</strong>
+            </mat-error>
+          </mat-form-field>
+          <button
+            mat-raised-button
+            color="primary"
+            type="submit"
+            style="float: right; margin-top: 10px"
+          >
+            <mat-icon>toc</mat-icon>
+            Ver Reporte
+          </button>
+        </div>
+      </div>
+    </mat-card-content>
+    <mat-card-actions> </mat-card-actions>
+  </mat-card>
+</form>
