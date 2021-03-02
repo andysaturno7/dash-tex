@@ -1,0 +1,46 @@
+{
+  "kind": "collectionType",
+  "collectionName": "stands",
+  "info": {
+    "name": "Stand",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "partners": {
+      "private": true,
+      "collection": "partner",
+      "via": "stands"
+    },
+    "stand_category": {
+      "model": "stand-category"
+    },
+    "areas": {
+      "type": "json"
+    },
+    "optional_stand": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "use_optional_stand": {
+      "type": "boolean",
+      "default": false
+    },
+    "vector": {
+      "type": "json"
+    }
+  }
+}

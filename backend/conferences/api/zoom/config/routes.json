@@ -1,0 +1,44 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/zoom/users",
+      "handler": "zoom.findUsers",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/zoom/users/:mail",
+      "handler": "zoom.userDetail",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/zoom/:wm",
+      "handler": "zoom.listWM",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/zoom/:wm/:id/participants",
+      "handler": "zoom.listScheduleUsers",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/zoom/:wm/:id/registrants/:status",
+      "handler": "zoom.getRegistrants",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

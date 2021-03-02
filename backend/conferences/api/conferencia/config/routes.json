@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/conferencias",
+      "handler": "conferencia.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/conferencias/count",
+      "handler": "conferencia.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/conferencias/:id",
+      "handler": "conferencia.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/conferencias",
+      "handler": "conferencia.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/conferencias/:id",
+      "handler": "conferencia.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/conferencias/:id",
+      "handler": "conferencia.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

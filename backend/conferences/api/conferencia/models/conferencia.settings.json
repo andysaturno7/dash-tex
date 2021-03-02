@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "conferencias",
+  "info": {
+    "name": "Conferencia",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "date": {
+      "type": "datetime"
+    },
+    "link": {
+      "type": "text"
+    },
+    "conferencistas": {
+      "collection": "conferencistas",
+      "via": "conferencias",
+      "dominant": true
+    },
+    "isFree": {
+      "type": "boolean"
+    },
+    "price": {
+      "type": "decimal"
+    }
+  }
+}

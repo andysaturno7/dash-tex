@@ -1,0 +1,13 @@
+{
+  "kind": "collectionType",
+  "collectionName": "zoom",
+  "info": {
+    "name": "zoom"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {}
+}

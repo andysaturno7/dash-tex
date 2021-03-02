@@ -1,0 +1,42 @@
+{
+  "kind": "collectionType",
+  "collectionName": "partners",
+  "info": {
+    "name": "Partner"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "logo": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "category": {
+      "type": "string",
+      "required": true
+    },
+    "email": {
+      "type": "email"
+    },
+    "stands": {
+      "via": "partners",
+      "collection": "stand",
+      "dominant": true
+    },
+    "contact_name": {
+      "type": "string"
+    }
+  }
+}

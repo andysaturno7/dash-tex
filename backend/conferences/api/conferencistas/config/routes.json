@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/conferencistas",
+      "handler": "conferencistas.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/conferencistas/count",
+      "handler": "conferencistas.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/conferencistas/:id",
+      "handler": "conferencistas.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/conferencistas",
+      "handler": "conferencistas.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/conferencistas/:id",
+      "handler": "conferencistas.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/conferencistas/:id",
+      "handler": "conferencistas.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
