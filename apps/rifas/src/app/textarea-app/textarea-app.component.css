@@ -1,0 +1,52 @@
+.app-config {
+  width: 100%;
+  height: 100vh;
+  overflow-y: scroll;
+  padding-top: 0;
+  padding-bottom: 40px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  transform: translateX(100%);
+  transition: transform 0.6s ease-out;
+}
+
+.app-center {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -40px;
+}
+
+.config-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 15px;
+}
+
+.config-icon-check {
+  display: none;
+}
+
+.isvisible {
+  transform: translateX(0%);
+}
+
+.timer-position {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(50%, 50%);
+}
+
+@media (min-width: 576px) {
+  .app-config {
+    max-width: 420px;
+  }
+}

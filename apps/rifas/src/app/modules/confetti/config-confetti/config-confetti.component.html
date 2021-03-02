@@ -1,0 +1,167 @@
+<form class="form-group main-form">
+  <div class="form-flex">
+    <div class="form-item">
+      <label for="max" class="">Cantidad:</label>
+      <input
+        type="number"
+        name="max"
+        id="max"
+        class="form-control col"
+        [(ngModel)]="confettiSettings.max"
+      />
+    </div>
+    <div class="form-item">
+      <label for="size" class="">Tamaño:</label>
+      <input
+        type="number"
+        name="size"
+        id="size"
+        class="form-control col"
+        [(ngModel)]="confettiSettings.size"
+      />
+    </div>
+    <div class="form-item">
+      <label for="clock">Velocidad:</label>
+      <input
+        type="number"
+        name="clock"
+        id="clock"
+        class="form-control col"
+        [(ngModel)]="confettiSettings.clock"
+      />
+    </div>
+  </div>
+  <div class="form-flex">
+    <div class="form-item">
+      <label for="width">Ancho:</label>
+      <input
+        type="number"
+        name="width"
+        id="width"
+        class="form-control col"
+        [(ngModel)]="confettiSettings.width"
+      />
+    </div>
+    <div class="form-item">
+      <label for="height">Alto:</label>
+      <input
+        type="number"
+        name="height"
+        id="height"
+        class="form-control col"
+        [(ngModel)]="confettiSettings.height"
+      />
+    </div>
+  </div>
+  <div class="row">
+    <label for="start" class="col-10">Arrancar desde arriba</label>
+    <div class="toggle-custom mt-1">
+      <input
+        type="checkbox"
+        name="start"
+        id="start"
+        [(ngModel)]="confettiSettings.start_from_edge"
+      />
+      <label
+        for="start"
+        [style.color]="confettiSettings.start_from_edge ? '#0799d3' : '#bbb'"
+      ></label>
+    </div>
+  </div>
+  <div class="row">
+    <label for="respawn" class="col-10">Infinito</label>
+    <div class="toggle-custom mt-1">
+      <input
+        type="checkbox"
+        name="respawn"
+        id="respawn"
+        [(ngModel)]="confettiSettings.respawn"
+      />
+      <label
+        for="respawn"
+        [style.color]="confettiSettings.respawn ? '#0799d3' : '#bbb'"
+      ></label>
+    </div>
+  </div>
+  <div class="row">
+    <label for="animate" class="col-10">Animado</label>
+    <div class="toggle-custom mt-1">
+      <input
+        type="checkbox"
+        name="animate"
+        id="animate"
+        [(ngModel)]="confettiSettings.animate"
+      />
+      <label
+        for="animate"
+        [style.color]="confettiSettings.animate ? '#0799d3' : '#bbb'"
+      ></label>
+    </div>
+  </div>
+  <div class="row">
+    <label class="col-10" for="rotate">Rotar</label>
+    <div class="toggle-custom mt-1">
+      <input
+        type="checkbox"
+        name="rotate"
+        id="rotate"
+        [(ngModel)]="confettiSettings.rotate"
+      />
+      <label
+        for="rotate"
+        [style.color]="confettiSettings.rotate ? '#0799d3' : '#bbb'"
+      ></label>
+    </div>
+  </div>
+  <fieldset>
+    <div class="row">
+      <label for="svg" class="col-10">Usar SVG con Confetti</label>
+      <div class="toggle-custom mt-1">
+        <input
+          type="checkbox"
+          name="svg"
+          id="svg"
+          [(ngModel)]="svg"
+          (change)="updateSettings()"
+        />
+        <label for="svg" [style.color]="svg ? '#dc3545' : '#bbb'"></label>
+      </div>
+    </div>
+    <div *ngIf="svg">
+      <label for="src">SVG(link):</label>
+      <input
+        type="url"
+        name="src"
+        id="src"
+        class="col form-control"
+        [(ngModel)]="SVG.src"
+      />
+      <div *ngIf="isImage">
+        <img src="{{ ImageUrl }}" alt="Preview" />
+      </div>
+      <div class="form-flex">
+        <div class="form-item">
+          <label for="size">Tamaño:</label>
+          <input
+            type="number"
+            name="size"
+            id="size"
+            class="col form-control"
+            [(ngModel)]="SVG.size"
+          />
+        </div>
+        <div class="form-item">
+          <label for="weight">Cantidad:</label>
+          <input
+            type="number"
+            name="weight"
+            id="weight"
+            class="col form-control"
+            [(ngModel)]="SVG.weight"
+          />
+        </div>
+      </div>
+      <button class="btn btn-info" (click)="emitSettings()">Usar imágen</button>
+    </div>
+  </fieldset>
+</form>

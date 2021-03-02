@@ -1,0 +1,60 @@
+<div class="app-full">
+  <div *ngIf="arrToSort && introView" class="container input-view">
+    <br />
+    <header-brand *ngIf="isHeaderBrand"></header-brand>
+    <div
+      class="card shadow card-custom"
+      [style.max-height.px]="introHeight"
+      style="animation: fadeInUp 1s"
+    >
+      <div class="card-header bg-danger text-white text-right">
+        <span>Total: </span>{{ arrToSort.length }}
+      </div>
+      <div class="card-body scroll-tune" style="overflow-y: auto">
+        <div *ngFor="let i of arrToSort">
+          <h5 class="text-center">
+            {{ i }}
+          </h5>
+          <hr />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="resultView" class="results-container app-center">
+    <div style="max-height: 60%; overflow-y: auto;">
+    <div
+    *ngFor="let w of winners"
+      style="animation: jackInTheBox 2s; min-width: 320px; margin: 4px;"
+      class="card shadow"
+    >
+      <div class="card-body">
+        <p class="label-winner">Ganador:</p>
+        <p class="winner-text">{{ w.element }}</p>
+        <hr />
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <div class="stickyBTN">
+    <div class="container mb-1">
+      <div style="border-style: none">
+        <button
+          *ngIf="introView"
+          class="btn btn-outline-danger"
+          (click)="sortear(3)"
+        >
+          Sortear
+        </button>
+        <button
+          *ngIf="resultView"
+          class="btn btn-outline-danger"
+          (click)="back(3)"
+        >
+          Volver a Sortear
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

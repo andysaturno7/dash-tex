@@ -1,0 +1,13 @@
+<button (click)="getLiveParticipants()" class="btn btn-primary  ">
+  Obtener de Zoom
+</button>
+<div *ngIf="Participants">
+  <div *ngFor="let i of Participants" class="card my-4">
+    <div class="card-header">Participante: {{ i.id }}</div>
+    <div class="card-body">
+      Nombre: {{ i.user_name }} <br />
+      Correo: {{ i.email }} <br />
+      Id de Usuario: {{ i.user_id }}
+    </div>
+  </div>
+</div>

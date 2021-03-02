@@ -1,0 +1,23 @@
+<div class="container input-container">
+  <h5 class="text-center my-4">Introduce una Lista</h5>
+  <textarea
+    class="form-control items-control shadow area-custom"
+    #itemsNames
+    [style.height.px]="textareaHeight"
+    [(ngModel)]="this.textareaValues"
+  ></textarea>
+  <div class="row mt-4">
+    <button
+      class="btn btn-outline-primary btn-lg shadow col mx-4"
+      (click)="emitArray(textareaToArray())"
+    >
+      Usar Lista
+    </button>
+    <button
+      class="btn btn-outline-primary btn-lg shadow col mx-4"
+      (click)="onZoomSelected()"
+    >
+      Usar Zoom
+    </button>
+  </div>
+</div>

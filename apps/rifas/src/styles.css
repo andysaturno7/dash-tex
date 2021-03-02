@@ -1,0 +1,37 @@
+/* You can add global styles to this file, and also import other style files */
+.app-full {
+  height: 100vh;
+  margin-top: -65px;
+  padding-top: 62px;
+}
+
+.scroll-tune::-webkit-scrollbar {
+  width: 4px;
+  height: 7px;
+  background-color: transparent;
+}
+
+.scroll-tune::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 4px;
+}
+
+.scroll-tune::-webkit-scrollbar-thumb:hover {
+  background: #ddd;
+  box-shadow: 0, 0, 2px, 1px, rgba(0, 0, 0, 0.2);
+  cursor: all-scroll;
+}
+
+.scroll-tune::-webkit-scrollbar-thumb:active {
+  background-color: #bbb;
+  border: 0.5px solid rgba(0, 0, 0, 0.2);
+}
+
+.scroll-tune::-webkit-scrollbar-track {
+  opacity: 0;
+}
+
+.scroll-tune::-webkit-scrollbar-track:hover,
+.scroll-tune::-webkit-scrollbar-track:active {
+  background: transparent;
+}

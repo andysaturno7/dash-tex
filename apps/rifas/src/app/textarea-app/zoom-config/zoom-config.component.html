@@ -1,0 +1,41 @@
+<div class="row my-4">
+  <div class="col-md-8">
+    <label for="type">Seminario o Reunión:</label>
+    <select
+      name="type"
+      id="type"
+      class="form-control"
+      [(ngModel)]="wmSelected"
+      (change)="setwmSelected()"
+    >
+      <option value="webinars">Seminario</option>
+      <option value="meetings">Reunión</option>
+    </select>
+  </div>
+  <div class="col-md-4">
+    <label for="type">Tiempo:</label>
+    <select
+      name="type"
+      id="type"
+      class="form-control"
+      [(ngModel)]="typeSelected"
+      (change)="setTypeSelected()"
+    >
+      <option value="live">live</option>
+      <option value="past">past</option>
+    </select>
+  </div>
+</div>
+<div class="row my-4">
+  <div class="col">
+    <label for="idWM">Id de reunión o seminario:</label>
+    <input
+      type="number"
+      name="idWM"
+      id="idWM"
+      class="form-control"
+      [(ngModel)]="wmId"
+      (change)="setwmId()"
+    />
+  </div>
+</div>

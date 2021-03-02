@@ -1,0 +1,20 @@
+.form-section {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  position: relative;
+}
+
+.form-flex {
+  display: flex;
+  justify-content: center;
+}
+
+.form-item {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+input[type="checkbox"] {
+  position: absolute;
+  right: 0;
+}

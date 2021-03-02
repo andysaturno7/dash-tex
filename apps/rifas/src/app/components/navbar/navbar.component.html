@@ -1,0 +1,41 @@
+<main>
+  <section>
+    <input type="checkbox" id="myInput" [(ngModel)]="collapsed" />
+    <label for="myInput">
+      <span class="bar top"></span>
+      <span class="bar middle"></span>
+      <span class="bar bottom"></span>
+    </label>
+    <aside class="asidebar container bg-danger shadow">
+      <a routerLink="inicio" (click)="collapsed = !collapsed">
+        <h3>MENU</h3>
+      </a>
+      <hr />
+      <ul class="nav-hover">
+        <li>
+          <a
+            routerLink="ingresar"
+            class="link-hover"
+            (click)="collapsed = !collapsed"
+            >Ingresar</a
+          >
+        </li>
+        <li>
+          <a routerLink="registrar" (click)="collapsed = !collapsed"
+            >Registrarse</a
+          >
+        </li>
+        <li>
+          <a routerLink="rifa-lista" (click)="collapsed = !collapsed"
+            >Rifa de Lista</a
+          >
+        </li>
+        <li>
+          <a routerLink="open-chat" (click)="collapsed = !collapsed"
+            >Open Chat</a
+          >
+        </li>
+      </ul>
+    </aside>
+  </section>
+</main>

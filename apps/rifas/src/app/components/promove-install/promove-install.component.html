@@ -1,0 +1,23 @@
+<div *ngIf="modalView" class="modal-bg">
+  <div class="main-promove card container shadow text-center bg-white">
+    <div class="card-body">
+      <h5>Agrega esta página a tu dispositivo para una mejor experiencia.</h5>
+      <div>
+        <button
+          type="button"
+          class="btn btn-warning mx-3 mt-3"
+          (click)="cerrarModal()"
+        >
+          Cerrar
+        </button>
+        <button
+          type="button"
+          class="btn btn-primary mx-3 mt-3"
+          (click)="installPWA()"
+        >
+          Agregar
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

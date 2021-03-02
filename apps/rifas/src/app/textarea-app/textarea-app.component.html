@@ -1,0 +1,100 @@
+<div style="position: relative">
+  <div style="position:absolute; left: 0; top: 0; height: 100vh; width: 100vw;">
+    <div style="position:absolute; right: 0; bottom: 0;">
+      <img style="width:90px; height:auto" src="/assets/img/tex.svg">
+    </div>
+  </div>
+  <!-- <div
+    class="app-center bg-danger"
+    style="clip-path: polygon(0% 25%, 100% 0%, 100% 75%, 0% 100%)"
+  ></div> -->
+  <div *ngIf="inputView" class="app-center">
+    <manual-input
+      (onInputReady)="onInputReady($event)"
+      (zoomSelected)="onZoomSelected()"
+    ></manual-input>
+  </div>
+  <br />
+  <br />
+  <app-rifa
+    *ngIf="rifaView"
+    [arrToSort]="arrayToSort"
+    (onResult)="confetti = true"
+    (onResultFinish)="confetti = false"
+    (onTimer)="timer = true; confetti = false"
+    (arrayRejected)="onArrayRejected($event); confetti = false"
+  ></app-rifa>
+  <app-timer
+    *ngIf="timer"
+    class="timer-position"
+    (onFinish)="timer = false"
+  ></app-timer>
+    
+  <div>
+    <input
+      type="checkbox"
+      name="config-icon-check"
+      class="config-icon-check"
+      id="config-icon-check"
+      [(ngModel)]="toggleConfig"
+      (change)="onToggleConfig()"
+    />
+    <label for="config-icon-check" class="config-icon">
+      <span role="button">
+        <img
+          src="/assets/icons/settings.svg"
+          alt="Config"
+          style="width: 50px"
+        />
+      </span>
+    </label>
+  </div>
+  <div class="app-config shadow bg-white scroll-tune" [class]="isvisible">
+    <div
+      class="text-white text-center"
+      style="
+        width: 100%;
+        padding-top: 1rem;
+        padding-bottom: 0.5rem;
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+        background-color: #dc3545;
+        z-index: 60;
+      "
+    >
+      <h4>Configuraciones</h4>
+      <span
+        role="button"
+        style="
+          font-size: large;
+          font-weight: bold;
+          position: absolute;
+          right: 1rem;
+          top: 1rem;
+        "
+        (click)="toggleConfig = !toggleConfig; onToggleConfig()"
+        >X</span
+      >
+    </div>
+    <div class="card-body" style="z-index: 50">
+      <h6 class="text-center">General</h6>
+      <hr />
+      <app-config></app-config>
+      <h6 class="text-center mt-4">Zoom</h6>
+      <hr />
+      <zoom-config></zoom-config>
+      <h6 class="text-center mt-4">Confetti</h6>
+      <hr />
+      <config-confetti
+        (onDone)="toggleConfig = !toggleConfig; onToggleConfig()"
+      ></config-confetti>
+    </div>
+  </div>
+  <div
+    *ngIf="confetti"
+    style="position: absolute; top: 0; left: 0; height: 100%; z-index: -1"
+  >
+    <app-confetti></app-confetti>
+  </div>
+</div>

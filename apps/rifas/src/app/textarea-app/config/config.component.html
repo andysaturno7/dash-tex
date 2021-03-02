@@ -1,0 +1,57 @@
+<div class="row">
+  <label for="deletewinner" class="col-10"
+    >Eliminar ganador después del sorteo</label
+  >
+  <div class="toggle-custom mt-1">
+    <input
+      type="checkbox"
+      id="deletewinner"
+      (change)="updateSetiings()"
+      [(ngModel)]="Settings.deleteWinner"
+    />
+    <label
+      for="deletewinner"
+      [style.color]="Settings.deleteWinner ? '#0799d3' : '#bbb'"
+    ></label>
+  </div>
+</div>
+<div class="row">
+  <label for="sortagain" class="col-10">Volver a sortear inmediatamente</label>
+  <div class="toggle-custom mt-1">
+    <input
+      type="checkbox"
+      id="sortagain"
+      (change)="updateSetiings()"
+      [(ngModel)]="Settings.sortAgain"
+    />
+    <label
+      for="sortagain"
+      [style.color]="Settings.sortAgain ? '#0799d3' : '#bbb'"
+    ></label>
+  </div>
+</div>
+<div class="row">
+  <label for="sortagain" class="col-10">Usar Brand en la cabecera</label>
+  <div class="toggle-custom mt-1">
+    <input
+      type="checkbox"
+      id="isHeaderBrand"
+      (change)="updateSetiings()"
+      [(ngModel)]="Settings.isHeaderBrand"
+    />
+    <label
+      for="isHeaderBrand"
+      [style.color]="Settings.isHeaderBrand ? '#0799d3' : '#bbb'"
+    ></label>
+  </div>
+</div>
+<div class="row" *ngIf="Settings.isHeaderBrand">
+  <label for="linkBrand" class="col-10">Introduce el link de una imágen:</label> <br>
+  <div>
+    <input type="text" placeholder="http://example.com" class="form-control" id="linkBrand" [(ngModel)]="Settings.linkBrand" (change)="updateSetiings()">
+  </div>
+</div>
+<div class="row">
+  <label class="col-10" for="qty-control">Ganador(s)</label>
+  <input type="number" class="form-control" id="qty-control" [(ngModel)]="Settings.qty" (change)="updateSetiings()">
+</div>

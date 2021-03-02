@@ -1,0 +1,106 @@
+{
+  "configVersion": 1,
+  "timestamp": 1610320270477,
+  "index": "/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/4.250fccfb8c589e660db1.js",
+        "/5.c74efd37cd63e6116432.js",
+        "/favicon.ico",
+        "/index.html",
+        "/main.2b157a948299b857035d.js",
+        "/manifest.webmanifest",
+        "/polyfills.00e02af16340fdc82052.js",
+        "/runtime.0f1b10224de01dba07e6.js",
+        "/scripts.fab8f135a8442c0ee62a.js",
+        "/styles.004b167bed4d39b7ea3f.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/assets/audio/countdown-sound.wav",
+        "/assets/audio/tensor-permanent.wav",
+        "/assets/css/animate.min.css",
+        "/assets/css/switch.css",
+        "/assets/icons/barb-128.png",
+        "/assets/icons/barb-144.png",
+        "/assets/icons/barb-152.png",
+        "/assets/icons/barb-192.png",
+        "/assets/icons/barb-384.png",
+        "/assets/icons/barb-512.png",
+        "/assets/icons/barb-72.png",
+        "/assets/icons/barb-96.png",
+        "/assets/icons/settings.svg",
+        "/assets/img/audiovisual.jpg",
+        "/assets/img/desarrollo-web.png",
+        "/assets/img/descargar.svg",
+        "/assets/img/sonido.jpg",
+        "/assets/img/wing.png"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "/4.250fccfb8c589e660db1.js": "fb20aad4072b34f9277c797a4a3351d920f57f2b",
+    "/5.c74efd37cd63e6116432.js": "d453b3bad1e4497f9464b8618d49b2a5ee99984a",
+    "/assets/audio/countdown-sound.wav": "434a67119da4985af7919ef18dc442c049e9446b",
+    "/assets/audio/tensor-permanent.wav": "a6d250306db531139d8160b45612b921cb239f50",
+    "/assets/css/animate.min.css": "bc96496831f4df311443b8e3d76cfc17db53a988",
+    "/assets/css/switch.css": "4e435497dcaa34d76dc50a8cc007be5656b8933c",
+    "/assets/icons/barb-128.png": "620dd4508de0ea4366adcbe4d4d1d1ae3b619fb3",
+    "/assets/icons/barb-144.png": "8b0f59bd8813726fb2a1f47c4a5f6a4dfc3e7aad",
+    "/assets/icons/barb-152.png": "acf87d1218bff12f7992e671b4bbbe142ce378ed",
+    "/assets/icons/barb-192.png": "3769d67042d356c41f54b4a5bccdec1eb7bbd420",
+    "/assets/icons/barb-384.png": "8d1b33419b7f71da8e7640bc82a91cd321e0cc42",
+    "/assets/icons/barb-512.png": "80f37c0561cb88abe1c87314314f35b1c1f8d6c1",
+    "/assets/icons/barb-72.png": "623ea7ea6268a9a5a62d04de44fa207685c69a9f",
+    "/assets/icons/barb-96.png": "6abdaabd23e25db2e302bd76a67327b3bc0b296c",
+    "/assets/icons/settings.svg": "2104d2366f0b4dd4121bbc7f0675a8ac9ddd60ef",
+    "/assets/img/audiovisual.jpg": "740e48a85c8b1333c40f0a0757a7bcec0e91fcda",
+    "/assets/img/desarrollo-web.png": "732afcc36c2e51b0a86e40e2750063fe1f9c23bb",
+    "/assets/img/descargar.svg": "647f57a8c1272d28e42f2c85751dc77dd6426727",
+    "/assets/img/sonido.jpg": "4018e30d992dac7be213361104f127870206c989",
+    "/assets/img/wing.png": "71f520543489c109e7a055d9d6875e4bdc80b23d",
+    "/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
+    "/index.html": "8304751ac4a41164b2f043a7f5876410090b002a",
+    "/main.2b157a948299b857035d.js": "9b04c5d72ae3c605eb94b4bb0ab2e513bcb03712",
+    "/manifest.webmanifest": "ec286d26e7db206d342bdc34dc0998983d29c518",
+    "/polyfills.00e02af16340fdc82052.js": "dbc502f030c7bb83c7caa1feee7aff990831f7d9",
+    "/runtime.0f1b10224de01dba07e6.js": "375651f5c3955a43f451d56a0854bbb151fbe39e",
+    "/scripts.fab8f135a8442c0ee62a.js": "17aa4e9fc3eaf381911a3d4b10afacef1c535f6e",
+    "/styles.004b167bed4d39b7ea3f.css": "95545f95e628d687dc65a054b6c9a9938776796a"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ]
+}
